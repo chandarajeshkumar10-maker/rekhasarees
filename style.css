@@ -1,46 +1,46 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: Arial, sans-serif;
     background: #f8f8f8;
     text-align: center;
 }
 
-header{
+header {
     background: #8B0000;
     color: white;
     padding: 20px;
 }
 
-nav{
+nav {
     background: #d4af37;
     padding: 10px;
 }
 
-nav a{
+nav a {
     color: white;
     text-decoration: none;
     margin: 15px;
     font-weight: bold;
 }
 
-nav a:hover{
+nav a:hover {
     text-decoration: underline;
 }
 
-.banner{
+.banner {
     padding: 30px;
 }
 
-.section{
+.section {
     padding: 30px;
 }
 
-button{
+button {
     background: #8B0000;
     color: white;
     padding: 12px 20px;
@@ -49,11 +49,11 @@ button{
     cursor: pointer;
 }
 
-button:hover{
+button:hover {
     background: #a00000;
 }
 
-.card{
+.card {
     display: inline-block;
     background: white;
     width: 220px;
@@ -62,63 +62,68 @@ button:hover{
     box-shadow: 0 0 10px #ccc;
 }
 
-.card img{
+.card img {
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
 
-.gallery{
+.gallery {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 20px;
     padding: 20px;
 }
 
-.gallery img{
+.gallery img {
     width: 200px;
     height: 200px;
-    margin: 10px;
+    object-fit: cover;
     border: 2px solid #ddd;
     cursor: pointer;
-    object-fit: cover;
+    transition: transform 0.3s;
 }
 
-.gallery img:hover{
+.gallery img:hover {
     transform: scale(1.05);
-    transition: 0.3s;
 }
 
-footer{
+footer {
     background: #8B0000;
     color: white;
     padding: 15px;
     margin-top: 20px;
 }
 
-.lightbox{
+.lightbox {
     display: none;
     position: fixed;
+    z-index: 9999;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.9);
-    z-index: 999;
+    background: rgba(0, 0, 0, 0.9);
 }
 
-.lightbox-content{
+.lightbox-content {
     display: block;
     margin: 50px auto;
     max-width: 90%;
     max-height: 80%;
 }
 
-.close{
+.close {
     position: absolute;
     top: 20px;
     right: 35px;
     color: white;
     font-size: 40px;
+    font-weight: bold;
     cursor: pointer;
+}
+
+.close:hover {
+    color: #ddd;
 }
