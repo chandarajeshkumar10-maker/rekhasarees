@@ -1,0 +1,200 @@
+body{
+    font-family: Arial, sans-serif;
+    margin:0;
+    padding:0;
+    background:#f8f8f8;
+    text-align:center;
+}
+
+header{
+    background:#8B0000;
+    color:white;
+    padding:20px;
+}
+
+nav{
+    background:#d4af37;
+    padding:10px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:15px;
+    font-weight:bold;
+}
+
+button{
+    background:#8B0000;
+    color:white;
+    padding:12px 20px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#a00000;
+}
+
+.banner{
+    padding:30px;
+}
+
+.section{
+    padding:30px;
+}
+
+.card{
+    display:inline-block;
+    background:white;
+    width:220px;
+    margin:15px;
+    padding:15px;
+    box-shadow:0 0 10px #ccc;
+}
+
+.card img{
+    width:100%;
+    height:200px;
+}
+
+.gallery img{
+    width:200px;
+    height:200px;
+    margin:10px;
+    border:2px solid #ddd;
+}
+
+footer{
+    background:#8B0000;
+    color:white;
+    padding:15px;
+    margin-top:20px;
+}
+{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+/* Body Design */
+body{
+    font-family: Arial, sans-serif;
+    background:#fff8f5;
+    color:#333;
+    text-align:center;
+}
+
+
+/* Header */
+header{
+    background:#800000;
+    color:white;
+    padding:25px;
+}
+
+header h1{
+    font-size:35px;
+}
+
+header p{
+    margin-top:10px;
+    font-size:18px;
+}
+
+
+/* Navigation */
+nav{
+    background:#5c0000;
+    padding:12px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-size:18px;
+}
+
+nav a:hover{
+    color:#ffd700;
+}
+
+
+/* Button */
+button{
+    background:#800000;
+    color:white;
+    padding:12px 25px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#a00000;
+}
+
+
+/* Gallery */
+.gallery{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+    padding:30px;
+}
+
+
+.gallery img{
+    width:220px;
+    height:300px;
+    object-fit:cover;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+
+.gallery img:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 15px gray;
+}
+
+
+/* Footer */
+footer{
+    background:#800000;
+    color:white;
+    padding:20px;
+    margin-top:30px;
+}.lightbox{
+    display:none;
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.9);
+    z-index:999;
+}
+
+.lightbox-content{
+    display:block;
+    margin:auto;
+    margin-top:50px;
+    max-width:90%;
+    max-height:80%;
+}
+
+.close{
+    position:absolute;
+    top:20px;
+    right:35px;
+    color:white;
+    font-size:40px;
+    cursor:pointer;
+}
