@@ -1,4 +1,4 @@
-alert("JavaScript Loaded");
+//alert("JavaScript Loaded");
 // Lightbox
 var lightbox = document.getElementById("lightbox");
 var lightboxImg = document.getElementById("lightbox-img");
