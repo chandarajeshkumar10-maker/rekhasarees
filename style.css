@@ -72,12 +72,6 @@ footer{
     padding:15px;
     margin-top:20px;
 }
-{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
 
 /* Body Design */
 body{
@@ -138,17 +132,17 @@ button:hover{
     background:#a00000;
 }
 
-
-/* Gallery */
 .gallery{
     display:flex;
     flex-wrap:wrap;
     justify-content:center;
     gap:20px;
-    padding:30px;
+    padding:20px;
 }
-
-
+.card{
+    display:inline-block;
+    width:220px;
+}
 .gallery img{
     width:220px;
     height:300px;
@@ -201,11 +195,18 @@ footer{
 
 #searchBox{
     width:300px;
-    padding:10px;
-    margin:20px;
+    max-width:90%;
+    padding:12px;
+    margin:20px auto;
+    display:block;
     font-size:18px;
     border:2px solid #8B0000;
-    border-radius:5px;
+    border-radius:8px;
+    outline:none;
+}
+
+#searchBox:focus{
+    border-color:#d4af37;
 }
 
 .whatsapp-float{
