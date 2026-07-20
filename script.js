@@ -39,3 +39,25 @@ function searchProduct() {
 
     }
 }
+
+let deferredPrompt;
+
+window.addEventListener("beforeinstallprompt", (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+
+    const installBtn = document.createElement("button");
+    installBtn.innerText = "📲 Install Rekha Sarees App";
+    installBtn.id = "installBtn";
+    document.body.appendChild(installBtn);
+
+    installBtn.addEventListener("click", async () => {
+        installBtn.style.display = "none";
+
+        deferredPrompt.prompt();
+
+        await deferredPrompt.userChoice;
+
+        deferredPrompt = null;
+    });
+});
