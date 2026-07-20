@@ -214,3 +214,18 @@ footer{
     bottom:20px;
     right:20px;
 }
+
+#installBtn{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#8B0000;
+    color:white;
+    padding:12px 18px;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:16px;
+    box-shadow:0 5px 10px rgba(0,0,0,.3);
+    z-index:9999;
+    }
