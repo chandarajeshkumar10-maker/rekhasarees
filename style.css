@@ -254,3 +254,42 @@ footer{
     text-shadow:2px 2px 5px black;
 }
 
+/* MOBILE & FULL WIDTH FIX */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+header {
+    width: 100%;
+    margin: 0;
+}
+
+nav {
+    width: 100%;
+}
+
+.banner {
+    width: 100%;
+    margin: 0;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+main {
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+}
+
