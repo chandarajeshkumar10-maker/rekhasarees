@@ -1,511 +1,275 @@
-/* ============================= */
-/* GENERAL */
-/* ============================= */
+/* ================================= */
+/* PRODUCT SEARCH */
+/* ================================= */
 
-* {
-    box-sizing: border-box;
-}
+function searchProduct() {
 
-html,
-body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    overflow-x: hidden;
-}
+    var input = document.getElementById("searchBox");
 
-body {
-    font-family: Arial, sans-serif;
-    background: #fff8f5;
-    color: #333;
-    text-align: center;
-}
-
-
-/* ============================= */
-/* HEADER */
-/* ============================= */
-
-header {
-    width: 100%;
-    padding: 20px;
-    background: #800000;
-    color: white;
-}
-
-header h1 {
-    font-size: 35px;
-    margin: 15px 0;
-}
-
-header p {
-    margin-top: 10px;
-    font-size: 18px;
-}
-
-
-/* ============================= */
-/* LOGO */
-/* ============================= */
-
-.logo {
-    width: 300px;
-    height: 300px;
-    max-width: 80%;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid white;
-    margin-top: 10px;
-}
-
-
-/* ============================= */
-/* NAVIGATION */
-/* ============================= */
-
-nav {
-    width: 100%;
-    background: #5c0000;
-    padding: 12px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-nav a:hover {
-    color: #ffd700;
-}
-
-
-/* ============================= */
-/* BANNER */
-/* ============================= */
-
-.banner {
-    width: 100%;
-    margin: 0;
-    padding: 20px;
-    overflow: hidden;
-}
-
-.banner img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-.banner-img {
-    width: 100%;
-    height: auto;
-    max-height: 500px;
-    object-fit: contain;
-    object-position: center;
-    display: block;
-    margin: 0 auto;
-}
-
-
-/* ============================= */
-/* BANNER TEXT */
-/* ============================= */
-
-.banner-text h2 {
-    font-size: 35px;
-    text-shadow: 2px 2px 5px black;
-}
-
-.banner-text p {
-    font-size: 20px;
-    text-shadow: 2px 2px 5px black;
-}
-
-
-/* ============================= */
-/* SECTION */
-/* ============================= */
-
-.section {
-    width: 100%;
-    padding: 30px 20px;
-}
-
-
-/* ============================= */
-/* BUTTON */
-/* ============================= */
-
-button {
-    background: #800000;
-    color: white;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-button:hover {
-    background: #a00000;
-}
-
-
-/* ============================= */
-/* GALLERY */
-/* ============================= */
-
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    width: 100%;
-    padding: 20px;
-}
-
-.card {
-    display: inline-block;
-    background: white;
-    width: 220px;
-    margin: 15px;
-    padding: 15px;
-    box-shadow: 0 0 10px #ccc;
-}
-
-.card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.gallery img {
-    width: 220px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.gallery img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px gray;
-}
-
-
-/* ============================= */
-/* SEARCH BOX */
-/* ============================= */
-
-#searchBox {
-    width: 300px;
-    max-width: 90%;
-    padding: 12px;
-    margin: 20px auto;
-    display: block;
-    font-size: 18px;
-    border: 2px solid #8B0000;
-    border-radius: 8px;
-    outline: none;
-}
-
-#searchBox:focus {
-    border-color: #d4af37;
-}
-
-
-/* ============================= */
-/* CATEGORY BUTTONS */
-/* ============================= */
-
-.category-buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    width: 100%;
-    margin: 20px auto 30px;
-    padding: 10px;
-}
-
-.category-buttons button {
-    background: #8B0000;
-    color: white;
-    border: 2px solid gold;
-    padding: 10px 15px;
-    border-radius: 25px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.category-buttons button:hover {
-    background: gold;
-    color: #8B0000;
-    transform: scale(1.05);
-}
-
-
-/* ============================= */
-/* NEW BADGE */
-/* ============================= */
-
-.product-image {
-    position: relative;
-    width: 100%;
-}
-
-.product-image img {
-    width: 100%;
-    display: block;
-}
-
-.new-badge {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: #8B0000;
-    color: white;
-    padding: 8px 15px;
-    border-radius: 20px;
-    border: 2px solid gold;
-    font-size: 13px;
-    font-weight: bold;
-    z-index: 10;
-}
-
-
-/* ============================= */
-/* LIGHTBOX */
-/* ============================= */
-
-.lightbox {
-    display: none;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.9);
-    z-index: 999;
-}
-
-.lightbox-content {
-    display: block;
-    margin: auto;
-    margin-top: 50px;
-    max-width: 90%;
-    max-height: 80%;
-}
-
-.close {
-    position: absolute;
-    top: 20px;
-    right: 35px;
-    color: white;
-    font-size: 40px;
-    cursor: pointer;
-}
-
-
-/* ============================= */
-/* FLOATING WHATSAPP */
-/* ============================= */
-
-.whatsapp-float {
-    position: fixed;
-    right: 30px;
-    bottom: 30px;
-    background: #25D366;
-    color: white;
-    padding: 12px 18px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 25px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    z-index: 9999;
-    transition: 0.3s;
-}
-
-.whatsapp-float:hover {
-    transform: scale(1.05);
-}
-
-
-/* ============================= */
-/* QR CODE BOX */
-/* ============================= */
-
-.qr-box {
-    position: fixed;
-    right: 30px;
-    top: 80%;
-    transform: translateY(-50%);
-    width: 180px;
-    background: white;
-    padding: 20px;
-    text-align: center;
-    border: 3px solid #D4AF37;
-    border-radius: 18px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-    z-index: 999;
-}
-
-.qr-box img {
-    width: 150px;
-    height: 150px;
-    max-width: 100%;
-    object-fit: contain;
-    display: block;
-    margin: auto;
-}
-
-.qr-box p {
-    margin: 12px 0 4px;
-    font-size: 20px;
-    font-weight: bold;
-    color: #650014;
-}
-
-.qr-box small {
-    font-size: 30px;
-    color: #8B0000;
-    font-weight: bold;
-}
-
-
-/* ============================= */
-/* FOOTER */
-/* ============================= */
-
-footer {
-    width: 100%;
-    background: #800000;
-    color: white;
-    padding: 20px;
-    margin-top: 30px;
-}
-
-
-/* ============================= */
-/* MOBILE */
-/* ============================= */
-
-@media screen and (max-width: 600px) {
-
-    header {
-        padding: 15px 10px;
+    if (!input) {
+        return;
     }
 
-    .logo {
-        width: 280px;
-        height: 280px;
-        max-width: 85%;
+    var searchValue = input.value.toLowerCase();
+
+    var cards = document.querySelectorAll(".gallery .card");
+
+    cards.forEach(function(card) {
+
+        var cardText = card.innerText.toLowerCase();
+
+        if (cardText.includes(searchValue)) {
+
+            card.style.display = "inline-block";
+
+        } else {
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+}
+
+
+/* ================================= */
+/* CATEGORY FILTER */
+/* ================================= */
+
+function filterProducts(category) {
+
+    var cards = document.querySelectorAll(".gallery .card");
+
+    cards.forEach(function(card) {
+
+        var cardCategory =
+            card.getAttribute("data-category");
+
+        if (
+            category === "all" ||
+            cardCategory === category
+        ) {
+
+            card.style.display = "inline-block";
+
+        } else {
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+}
+
+
+/* ================================= */
+/* FESTIVAL OFFERS */
+/* ================================= */
+
+function showFestivalOffer() {
+
+    var message =
+        document.getElementById("festivalMessage");
+
+    if (!message) {
+        return;
     }
 
-    header h1 {
-        font-size: 28px;
+    message.innerHTML =
+        "🎊 Festival Special Offer! 🎊<br>" +
+        "Get exciting discounts on selected products.<br>" +
+        "Order now on WhatsApp!";
+
+}
+
+
+/* ================================= */
+/* PRODUCT DETAILS POPUP */
+/* ================================= */
+
+function openProduct(
+    code,
+    name,
+    price,
+    image
+) {
+
+    var popup =
+        document.getElementById("productPopup");
+
+    var popupImage =
+        document.getElementById("popupImage");
+
+    var popupCode =
+        document.getElementById("popupCode");
+
+    var popupName =
+        document.getElementById("popupName");
+
+    var popupPrice =
+        document.getElementById("popupPrice");
+
+
+    /* PRODUCT IMAGE */
+
+    popupImage.src = image;
+
+    popupImage.alt = name;
+
+
+    /* PRODUCT DETAILS */
+
+    popupCode.innerText =
+        "Code: " + code;
+
+    popupName.innerText =
+        name;
+
+    popupPrice.innerText =
+        price;
+
+
+    /* SHOW POPUP */
+
+    popup.style.display = "block";
+
+}
+
+
+/* ================================= */
+/* CLOSE PRODUCT POPUP */
+/* ================================= */
+
+function closeProduct() {
+
+    var popup =
+        document.getElementById("productPopup");
+
+    popup.style.display = "none";
+
+}
+
+
+/* ================================= */
+/* CLOSE POPUP WHEN CLICKING OUTSIDE */
+/* ================================= */
+
+window.addEventListener(
+    "click",
+    function(event) {
+
+        var popup =
+            document.getElementById("productPopup");
+
+        if (
+            event.target === popup
+        ) {
+
+            popup.style.display =
+                "none";
+
+        }
+
     }
+);
 
-    header p {
-        font-size: 16px;
+
+/* ================================= */
+/* IMAGE LIGHTBOX */
+/* ================================= */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function() {
+
+        var lightbox =
+            document.getElementById("lightbox");
+
+        var lightboxImg =
+            document.getElementById("lightbox-img");
+
+        var closeButton =
+            document.querySelector(".close");
+
+
+        /* CHECK LIGHTBOX EXISTS */
+
+        if (
+            !lightbox ||
+            !lightboxImg
+        ) {
+
+            return;
+
+        }
+
+
+        /* ALL GALLERY IMAGES */
+
+        var galleryImages =
+            document.querySelectorAll(
+                ".gallery img"
+            );
+
+
+        /* OPEN IMAGE */
+
+        galleryImages.forEach(
+            function(img) {
+
+                img.addEventListener(
+                    "click",
+                    function() {
+
+                        lightbox.style.display =
+                            "block";
+
+                        lightboxImg.src =
+                            img.src;
+
+                    }
+                );
+
+            }
+        );
+
+
+        /* CLOSE BUTTON */
+
+        if (closeButton) {
+
+            closeButton.addEventListener(
+                "click",
+                function() {
+
+                    lightbox.style.display =
+                        "none";
+
+                }
+            );
+
+        }
+
+
+        /* CLICK OUTSIDE IMAGE */
+
+        lightbox.addEventListener(
+            "click",
+            function(event) {
+
+                if (
+                    event.target === lightbox
+                ) {
+
+                    lightbox.style.display =
+                        "none";
+
+                }
+
+            }
+        );
+
     }
-
-    nav {
-        padding: 12px 5px;
-    }
-
-    nav a {
-        margin: 0 8px;
-        font-size: 16px;
-    }
-
-    .banner {
-        width: 100%;
-        padding: 10px;
-        margin: 0;
-    }
-
-    .banner img {
-        display: block;
-        width: 100%;
-        height: auto;
-        object-fit: contain;
-    }
-
-    .banner-text h2 {
-        font-size: 28px;
-    }
-
-    .banner-text p {
-        font-size: 16px;
-    }
-
-    .section {
-        padding: 20px 10px;
-    }
-
-    .gallery {
-        padding: 10px;
-        gap: 10px;
-    }
-
-    .card {
-        width: 45%;
-        margin: 5px;
-    }
-
-    .gallery img {
-        width: 100%;
-        height: auto;
-    }
-
-    /* Category Buttons */
-
-    .category-buttons {
-        gap: 8px;
-        padding: 5px;
-    }
-
-    .category-buttons button {
-        padding: 8px 12px;
-        font-size: 11px;
-    }
-
-    /* QR Code */
-
-    .qr-box {
-        width: 180px;
-        right: 10px;
-        padding: 10px;
-    }
-
-    .qr-box img {
-        width: 150px;
-        height: 150px;
-    }
-
-    .qr-box p {
-        font-size: 13px;
-    }
-
-    .qr-box small {
-        font-size: 10px;
-    }
-
-    /* WhatsApp */
-
-    .whatsapp-float {
-        right: auto;
-        left: 10px;
-        bottom: 10px;
-        padding: 10px 14px;
-        font-size: 13px;
-    }
+);
