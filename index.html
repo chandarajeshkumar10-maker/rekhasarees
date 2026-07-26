@@ -1,137 +1,393 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
     <title>Rekha Sarees</title>
-    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+          href="style.css">
+
 </head>
+
 
 <body>
 
-<header>
-    <img src="logo.jpeg" class="logo">
 
-    <h1>REKHA SAREES COLLECTIONS</h1>
-    <p>Traditional & Designer Sarees</p>
+<!-- ========================= -->
+<!-- HEADER -->
+<!-- ========================= -->
+
+<header>
+
+    <img src="logo.jpeg"
+         class="logo"
+         alt="Rekha Sarees Logo">
+
+    <h1>
+        REKHA SAREES COLLECTIONS
+    </h1>
+
+    <p>
+        Traditional & Designer Sarees
+    </p>
+
 </header>
 
+
+<!-- ========================= -->
+<!-- NAVIGATION -->
+<!-- ========================= -->
+
 <nav>
-    <a href="index.html">Home</a>
-    <a href="collection.html">Collections</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-</nav>
 
-<div class="banner">
-    <img src="banner.jpeg" alt="Rekha Sarees Collections">
-</div>
-
-<div class="banner-text">
-    <h2>Elegant Sarees For Every Occasion</h2>
-    <p>Beautiful designs with quality collection.</p>
+    <a href="index.html">
+        Home
+    </a>
 
     <a href="collection.html">
-        <button>View Collection</button>
+        Collections
     </a>
+
+    <a href="#about">
+        About
+    </a>
+
+    <a href="#contact">
+        Contact
+    </a>
+
+</nav>
+
+
+<!-- ========================= -->
+<!-- BANNER -->
+<!-- ========================= -->
+
+<div class="banner">
+
+    <img src="banner.jpeg"
+         alt="Rekha Sarees Collections">
+
 </div>
 
 
-<div class="section" id="about">
+<!-- ========================= -->
+<!-- BANNER TEXT -->
+<!-- ========================= -->
 
-    <h2>Our Products</h2>
+<div class="banner-text">
 
-    <!-- CATEGORY BUTTONS -->
-<div class="category-buttons">
+    <h2>
+        Elegant Sarees For Every Occasion
+    </h2>
 
-    <a href="collection.html">ALL PRODUCTS</a>
+    <p>
+        Beautiful designs with quality collection.
+    </p>
 
-    <a href="collection.html">SAREES</a>
+    <a href="collection.html">
 
-    <a href="collection.html">BEDSHEETS</a>
+        <button>
+            View Collection
+        </button>
 
-    <a href="collection.html">DEVAN SETS</a>
-
-    <a href="collection.html">NIGHTIES</a>
-
-    <a href="collection.html">SOFA COVERS</a>
+    </a>
 
 </div>
-    
+
+
+<!-- ========================= -->
+<!-- ABOUT / PRODUCTS SECTION -->
+<!-- ========================= -->
+
+<div class="section"
+     id="about">
+
+
+    <!-- ========================= -->
+    <!-- FESTIVAL OFFERS -->
+    <!-- ========================= -->
+
+    <div class="festival-offer">
+
+        <h2>
+            🎉 FESTIVAL SPECIAL OFFERS 🎉
+        </h2>
+
+        <p>
+            Special Discounts on Selected Products
+        </p>
+
+        <button onclick="showFestivalOffer()">
+
+            VIEW FESTIVAL OFFERS
+
+        </button>
+
+        <p id="festivalMessage"></p>
+
+    </div>
+
+
+    <!-- ========================= -->
+    <!-- OUR PRODUCTS -->
+    <!-- ========================= -->
+
+    <h2>
+        Our Products
+    </h2>
+
+
+    <!-- ========================= -->
+    <!-- BEST SELLERS -->
+    <!-- ========================= -->
+
+    <div class="best-sellers">
+
+        <h2>
+            ⭐ BEST SELLERS ⭐
+        </h2>
+
+
+        <div class="best-card">
+
+            <div class="product-image">
+
+                <span class="new-badge">
+                    ⭐ SALE
+                </span>
+
+                <img src="20.jpeg"
+                     alt="Fancy Saree">
+            </div>
+
+            <h3>
+                Fancy Saree
+            </h3>
+
+            <p>
+                Code: RS010
+            </p>
+
+            <p class="out-stock">
+                ❌ OUT OF STOCK
+            </p>
+
+            <button onclick="openProduct(
+                'RS011',
+                'Fancy Saree',
+                '₹1100',
+                'saree 1.jpeg'
+            )">
+
+                VIEW DETAILS
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ========================= -->
+    <!-- PAMPHLET -->
+    <!-- ========================= -->
 
     <center>
+
         <div class="card">
-            <img src="1.jpeg">
-            <h3>Pamphlet</h3>
+
+            <img src="1.jpeg"
+                 alt="Pamphlet">
+
+            <h3>
+                Pamphlet
+            </h3>
+
         </div>
+
     </center>
 
 
-    <!-- RS011 -->
+    <!-- ========================= -->
+    <!-- RS011 FANCY SAREE -->
+    <!-- ========================= -->
+
     <div class="card">
 
         <div class="product-image">
-            <span class="new-badge">NEW</span>
-            <img src="saree 1.jpeg">
+
+            <span class="new-badge">
+                ⭐ NEW
+            </span>
+
+            <img src="saree 1.jpeg"
+                 alt="Fancy Saree">
+
         </div>
 
-        <h3>Code : RS011</h3>
-        <h3>Fancy Sarees</h3>
-        <p><strike>Rs.1300</strike> Rs.1100</p>
 
-        <a href="https://wa.me/919052393676?text=Hello%20I%20want%20to%20order%20Product%20Code%20RS011" target="_blank">
-            <button>Order on WhatsApp</button>
+        <h3>
+            Code : RS011
+        </h3>
+
+        <h3>
+            Fancy Sarees
+        </h3>
+
+
+        <p>
+            <strike>Rs.1300</strike>
+            Rs.1100
+        </p>
+
+
+        <p class="in-stock">
+            ✅ IN STOCK
+        </p>
+
+
+        <a href="https://wa.me/919052393676?text=Hello%20I%20want%20to%20order%20Product%20Code%20RS011"
+           target="_blank">
+
+            <button>
+                Order on WhatsApp
+            </button>
+
         </a>
 
     </div>
 
 
-    <!-- SB003 -->
+    <!-- ========================= -->
+    <!-- SB003 BEDSHEET -->
+    <!-- ========================= -->
+
     <div class="card">
 
         <div class="product-image">
-            <span class="new-badge">NEW</span>
-            <img src="bedsheet.jpeg">
+
+            <span class="new-badge">
+                ⭐ NEW
+            </span>
+
+            <img src="bedsheet.jpeg"
+                 alt="Single Bedsheet">
+
         </div>
 
-        <h3>Code : SB003</h3>
-        <h3>Single Bedsheets</h3>
-        <p><strike>Rs.499</strike> Rs.350</p>
 
-        <a href="https://wa.me/919052393676?text=Hello%20I%20want%20to%20order%20Product%20Code%20SB003" target="_blank">
-            <button>Order on WhatsApp</button>
+        <h3>
+            Code : SB003
+        </h3>
+
+        <h3>
+            Single Bedsheets
+        </h3>
+
+
+        <p>
+            <strike>Rs.499</strike>
+            Rs.350
+        </p>
+
+
+        <p class="in-stock">
+            ✅ IN STOCK
+        </p>
+
+
+        <a href="https://wa.me/919052393676?text=Hello%20I%20want%20to%20order%20Product%20Code%20SB003"
+           target="_blank">
+
+            <button>
+                Order on WhatsApp
+            </button>
+
         </a>
 
     </div>
 
 
-    <!-- SC002 -->
+    <!-- ========================= -->
+    <!-- SC002 SOFA COVER -->
+    <!-- ========================= -->
+
     <div class="card">
 
         <div class="product-image">
-            <span class="new-badge">NEW</span>
-            <img src="sofa set 1.jpeg">
+
+            <span class="new-badge">
+                ⭐ NEW
+            </span>
+
+            <img src="sofa set 1.jpeg"
+                 alt="Sofa Covers">
+
         </div>
 
-        <h3>Code : SC002</h3>
-        <h3>Sofa Covers</h3>
-        <p><strike>Rs.800</strike> Rs.650</p>
 
-        <a href="https://wa.me/919052393676?text=Hello%20I%20want%20to%20order%20Product%20Code%20SC002" target="_blank">
-            <button>Order on WhatsApp</button>
+        <h3>
+            Code : SC002
+        </h3>
+
+        <h3>
+            Sofa Covers
+        </h3>
+
+
+        <p>
+            <strike>Rs.800</strike>
+            Rs.650
+        </p>
+
+
+        <p class="in-stock">
+            ✅ IN STOCK
+        </p>
+
+
+        <a href="https://wa.me/919052393676?text=Hello%20I%20want%20to%20order%20Product%20Code%20SC002"
+           target="_blank">
+
+            <button>
+                Order on WhatsApp
+            </button>
+
         </a>
 
     </div>
+
 
 </div>
 
 
-<!-- ABOUT -->
-<div class="section" id="about">
+<!-- ========================= -->
+<!-- ABOUT REKHA SAREES -->
+<!-- ========================= -->
 
-    <h2>About Rekha Sarees</h2>
+<div class="section"
+     id="about">
+
+
+    <h2>
+        About Rekha Sarees
+    </h2>
+
 
     <p>
-        Welcome to <b>Rekha Sarees Collections</b>.
+        Welcome to
+        <b>
+            Rekha Sarees Collections
+        </b>.
     </p>
+
 
     <p>
         We offer Traditional & Designer Sarees,
@@ -139,12 +395,13 @@
         Towels and Sofa Covers.
     </p>
 
+
     <p>
         Quality products at affordable prices.
     </p>
 
-</div>
 
+</div>
 
 <!-- CONTACT -->
 <div class="section" id="contact">
@@ -174,6 +431,50 @@
 </div>
 
 
+<!-- ========================= -->
+<!-- PRODUCT DETAILS POPUP -->
+<!-- ========================= -->
+
+<div id="productPopup"
+     class="product-popup">
+
+
+    <div class="popup-content">
+
+
+        <span onclick="closeProduct()"
+              class="popup-close">
+
+            &times;
+
+        </span>
+
+
+        <img id="popupImage"
+             alt="Product Image">
+
+
+        <h2 id="popupCode"></h2>
+
+
+        <h3 id="popupName"></h3>
+
+
+        <p id="popupPrice"></p>
+
+
+        <button onclick="closeProduct()">
+
+            CLOSE
+
+        </button>
+
+
+    </div>
+
+
+</div>
+
 <!-- QR CODE -->
 <div class="qr-box">
 
@@ -187,9 +488,23 @@
 <!-- FLOATING WHATSAPP BUTTON -->
 
 <a href="https://wa.me/919052393676"
-   class="whatsapp-float"
-   target="_blank">
-    💬 WhatsApp
+   target="_blank"
+   style="
+   position: fixed;
+   right: 10px;
+   left: auto;
+   bottom: 10px;
+   background-color: #25D366;
+   color: white;
+   padding: 15px 25px;
+   border-radius: 30px;
+   text-decoration: none;
+   font-family: Arial, sans-serif;
+   font-size: 35px;
+   font-weight: bold;
+   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+   z-index: 99999999;">
+   💬 WhatsApp
 </a>
 
 </body>
