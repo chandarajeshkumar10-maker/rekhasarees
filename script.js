@@ -39,3 +39,23 @@ function searchProduct() {
 
     }
 }
+
+function filterProducts(category) {
+
+    const products = document.querySelectorAll(".card");
+
+    products.forEach(function(product) {
+
+        if (category === "all") {
+            product.style.display = "";
+        } 
+        else if (product.dataset.category === category) {
+            product.style.display = "";
+        } 
+        else {
+            product.style.display = "none";
+        }
+
+    });
+
+}
