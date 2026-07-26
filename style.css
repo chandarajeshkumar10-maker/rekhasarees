@@ -1013,3 +1013,29 @@ a.whatsapp-float {
 
     z-index: 9999999 !important;
 }
+
+/* MOBILE QR CODE SIZE */
+
+@media screen and (max-width: 600px) {
+
+    .qr-box {
+        width: 100px !important;
+        right: 5px !important;
+        padding: 5px !important;
+    }
+
+    .qr-box img {
+        width: 80px !important;
+        height: 80px !important;
+    }
+
+    .qr-box p {
+        font-size: 9px !important;
+        margin: 5px 0 2px !important;
+    }
+
+    .qr-box small {
+        font-size: 7px !important;
+    }
+
+}
